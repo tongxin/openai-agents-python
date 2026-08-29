@@ -1,10 +1,18 @@
 # Model provider examples
 
 The examples in this directory show how to route models through adapter layers such as LiteLLM and
-any-llm. The default examples all use OpenRouter so you only need one API key:
+any-llm, or through an OpenAI-compatible provider such as DeepSeek. The adapter examples use
+OpenRouter by default so you only need one API key:
 
 ```bash
 export OPENROUTER_API_KEY="..."
+```
+
+The DeepSeek example calls DeepSeek's OpenAI-compatible API directly:
+
+```bash
+export DEEPSEEK_API_KEY="..."
+uv run examples/model_providers/deepseek_provider.py
 ```
 
 Run one of the adapter examples:
